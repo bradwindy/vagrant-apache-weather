@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
 <head>
-<title>Test page</title>
+	<script type="text/javascript">
+		fetch('weather.txt')
+		  .then(response => response.text())
+		  .then(text => document.getElementById("weather").innerHTML = text)
+	</script>
 </head>
+
 <body>
-
-<h1>Testing 1, 2, 3 ...</h1>
-<p>Hello from ???.</p>
-
+	<h1>Weather</h1>
+	<p id="weather"></p>
 </body>
-</html>

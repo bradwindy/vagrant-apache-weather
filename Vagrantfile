@@ -74,5 +74,9 @@ Vagrant.configure("2") do |config|
     a2ensite test-website
     a2dissite 000-default
     service apache2 reload
+    sudo apt-get -y update
+    sudo apt-get -y install ansiweather
+    cd /vagrant/www
+    ansiweather -l Dunedin,NZ -u metric -s 0 -a 0 -F > weather.txt
   SHELL
 end
